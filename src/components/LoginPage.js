@@ -16,10 +16,10 @@ const LoginPage = () => {
     try {
       if (!name.trim() || !password.trim()) {
         toast.error("Please enter both username and password");
-        return;
-      }
+        return;
+      }
 
-      const response = await axios.post('http://prj-backend.onrender.com:4001/login', { name, password });
+      const response = await axios.post('http://prj-backend.onrender.com/login', { name, password });
       localStorage.setItem('token', response.data.token);
       toast.success('Login successful!');
       navigate('/admin-dashboard');

@@ -22,7 +22,7 @@ const Users = () => {
       }
 
       try {
-        const response = await axios.get('http://prj-backend.onrender.com:4001/users', {
+        const response = await axios.get('http://prj-backend.onrender.com/users', {
           headers: {
             Authorization: `Bearer ${token}`
           }
@@ -41,7 +41,7 @@ const Users = () => {
   const deleteUser = async (userId) => {
     const token = localStorage.getItem('token');
     try {
-      await axios.delete(`http://prj-backend.onrender.com:4001/users/${userId}`, {
+      await axios.delete(`http://prj-backend.onrender.com/users/${userId}`, {
         headers: {
           Authorization: `Bearer ${token}`
         }
