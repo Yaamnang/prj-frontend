@@ -19,7 +19,7 @@ const LoginPage = () => {
         return;
       }
 
-      const response = await axios.post('http://prj-backend.onrender.com/login', { name, password });
+      const response = await axios.post('https://prj-backend.onrender.com/login', { name, password });
       localStorage.setItem('token', response.data.token);
       toast.success('Login successful!');
       navigate('/admin-dashboard');
